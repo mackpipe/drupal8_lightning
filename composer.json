@@ -23,7 +23,8 @@
         "drupal/link_attributes": "^1.10",
         "drupal/back_to_top": "^1.1",
         "drupal/social_media": "^1.8",
-        "drupal/better_exposed_filters": "^4.0@alpha"
+        "drupal/better_exposed_filters": "^4.0@alpha",
+        "drupal/views_bootstrap": "^4.2"
     },
     "require-dev": {
     },
