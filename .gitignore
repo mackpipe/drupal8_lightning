@@ -1,0 +1,7 @@
+/vendor
+/themes
+/profiles
+/modules
+/drush
+/docroot
+/acquia-pipelines.yml
