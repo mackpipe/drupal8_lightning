@@ -21,8 +21,9 @@ Copy files sites/default
 
 
 # Run if present errors
-docker exec kabitat drush config-get core.extension module
-docker exec kabitat drush cc all
+
+- docker exec kabitat drush config-get core.extension module
+- docker exec kabitat drush cc all
 
 
 # Docker
