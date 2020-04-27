@@ -1,3 +1,32 @@
+## Kabitat
+
+# De presentar inconvenientes con el carga de la base de datos ejecutar.
+$ docker exec -i nombre_del_contenedor sh -c 'exec mysql -uroot -p"$MYSQL_ROOT_PASSWORD" drupal' < docker/db.sql
+
+# Install dependencies
+composer install --ignore-platform-reqs
+
+# Files
+
+Copy files sites/default 
+
+- settings.php
+- service.php
+
+# Run
+docker exec kabitat drush config-get core.extension module
+docker exec kabitat drush cc all
+
+
+# Docker
+-- link to theme is config
+
+# Drupal Server 
+
+-- link to theme 
+    ln -s ~/WWW/bootstrap_kabitat  ~/WWW/drupal8_lightning/themes/custom/bootstrap_kabitat  
+
+
 This is a Composer-based installer for the [Lightning](https://www.drupal.org/project/lightning) Drupal distribution. Welcome to the future!
 
 ## Get Started
