@@ -6,25 +6,33 @@ $ docker exec -i nombre_del_contenedor sh -c 'exec mysql -uroot -p"$MYSQL_ROOT_P
 # Install dependencies
 composer install --ignore-platform-reqs
 
-# Files
+# Files Automatic move with composer
 
 Copy files sites/default 
 
 - settings.php
 - service.php
 
-# Run
+
+# Copy files
+    docker/files unzip and paste sites/default/files
+    docker/libraries unzip and paste libraries
+    docker/modules_contrib unzip and paste modules/contrib
+
+
+# Run if present errors
 docker exec kabitat drush config-get core.extension module
 docker exec kabitat drush cc all
 
 
 # Docker
--- link to theme is config
+-- link to theme is config in docker-compose
 
-# Drupal Server 
-
+# Drupal console 
 -- link to theme 
     ln -s ~/WWW/bootstrap_kabitat  ~/WWW/drupal8_lightning/themes/custom/bootstrap_kabitat  
+
+
 
 
 This is a Composer-based installer for the [Lightning](https://www.drupal.org/project/lightning) Drupal distribution. Welcome to the future!
