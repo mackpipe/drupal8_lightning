@@ -1,0 +1,20 @@
+version: "3.1"
+
+services:
+  drupal:
+    image: maccevedor/apache-drupal8:02
+    container_name: kabitat
+    ports:
+      - 80:80
+    volumes:
+      - ~/WWW/drupal8_lightning_old:/var/www/html
+      - ~/WWW/bootstrap_kabitat:/var/www/html/themes/custom/bootstrap_kabitat
+    env_file:
+      - ./drupal.env
+    networks:
+      - biblioteca_uniandes
+    restart: always
+
+networks:
+  biblioteca_uniandes:
+    external: true
