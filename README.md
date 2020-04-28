@@ -4,6 +4,7 @@
 $ docker exec -i nombre_del_contenedor sh -c 'exec mysql -uroot -p"$MYSQL_ROOT_PASSWORD" drupal' < docker/db.sql
 
 # Install dependencies
+composer install
 composer install --ignore-platform-reqs
 
 # Files Automatic move with composer
@@ -33,7 +34,11 @@ Copy files sites/default
 -- link to theme 
     ln -s ~/WWW/bootstrap_kabitat  ~/WWW/drupal8_lightning/themes/custom/bootstrap_kabitat  
 
+# Ubuntu 
+sudo apt-get install php7.2-curl
 
+
+####################################################################################
 
 
 This is a Composer-based installer for the [Lightning](https://www.drupal.org/project/lightning) Drupal distribution. Welcome to the future!
