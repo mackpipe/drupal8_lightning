@@ -86,13 +86,13 @@
     "scripts": {
         "post-install-cmd": [
             "DrupalComposer\\DrupalScaffold\\Plugin::scaffold",
+            "cp docker/{settings.php,services.yml} sites/default",
             "vendor/bin/drush cr",
             "vendor/bin/drupal server localhost:7000"
         ],
         "post-update-cmd": "DrupalComposer\\DrupalScaffold\\Plugin::scaffold",
         "post-create-project-cmd": [
             "rm -r -f .travis.yml behat.yml .travis-ci",
-            "cp docker/{settings.php,services.yml} sites/default",
             "cp -rl docker/files sites/default/files"
         ],
         "nuke": "rm -r -f modules/contrib profiles/contrib/lightning vendor composer.lock",
