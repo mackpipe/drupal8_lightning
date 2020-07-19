@@ -87,7 +87,7 @@
         "post-install-cmd": [
             "DrupalComposer\\DrupalScaffold\\Plugin::scaffold",
             "vendor/bin/drush cr",
-            "drupal server localhost:7000"
+            "vendor/bin/drupal server localhost:7000"
         ],
         "post-update-cmd": "DrupalComposer\\DrupalScaffold\\Plugin::scaffold",
         "post-create-project-cmd": [
